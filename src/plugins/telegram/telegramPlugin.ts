@@ -1,6 +1,4 @@
 import axios from 'axios';
-import * as dotenv from 'dotenv';
-dotenv.config();
 
 const apiUrl = `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}`;
 
@@ -10,9 +8,7 @@ export async function getUserId(handles: string[]): Promise<string[]> {
   const UserIds: string[] = [];
 
   try {
-    const response = await axios.get(
-      `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/getUpdates`
-    );
+    const response = await axios.get(`${apiUrl}/getUpdates`);
     const chats = response.data.result;
     if (chats.length > 0) {
       for (let i = 0; i < chats.length; i++) {

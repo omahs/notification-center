@@ -1,11 +1,10 @@
 import axios from 'axios';
-import * as dotenv from 'dotenv';
 
-dotenv.config();
+const API_URL = 'https://www.googleapis.com/gmail/v1/users/userId/messages/send';
 
 export async function createMessage(to: string, subject: string, body: string) {
   const str = [`To: ${to}`, `Subject: ${subject}`, '', body].join('\n');
-  return new Buffer(str)
+  return Buffer.from(str)
     .toString('base64')
     .replace(/\+/g, '-')
     .replace(/\//g, '_');
@@ -14,10 +13,8 @@ export async function createMessage(to: string, subject: string, body: string) {
 export async function sendMessage(to: string, subject: string, body: string) {
   try {
     const response = await axios.post(
-      'https://www.googleapis.com/gmail/v1/users/userId/messages/send',
-      {
-        raw: createMessage(to, subject, body),
-      },
+      API_URL,
+      { raw: createMessage(to, subject, body) },
       {
         headers: {
           Authorization: `Bearer ${process.env.EMAIL_TOKEN}`,
