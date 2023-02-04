@@ -108,9 +108,9 @@ export function addTelegrams(wallet_address: string, telegrams: string[]) {
       } else {
         console.log(
           '➡️ ' +
-          telegrams +
-          ' telegram(s) handle added successfully to user id : ' +
-          wallet_address
+            telegrams +
+            ' telegram(s) handle added successfully to user id : ' +
+            wallet_address
         );
       }
     }
@@ -134,9 +134,9 @@ export function addEmails(wallet_address: string, emails: string[]) {
       } else {
         console.log(
           '➡️ ' +
-          emails +
-          ' email(s) handle added successfully to user id : ' +
-          wallet_address
+            emails +
+            ' email(s) handle added successfully to user id : ' +
+            wallet_address
         );
       }
     }
@@ -160,9 +160,9 @@ export function addIfttts(wallet_address: string, ifttts: string[]) {
       } else {
         console.log(
           '➡️ ' +
-          ifttts +
-          ' ifttts(s) handle added successfully to user id : ' +
-          wallet_address
+            ifttts +
+            ' ifttts(s) handle added successfully to user id : ' +
+            wallet_address
         );
       }
     }
@@ -184,9 +184,9 @@ export function deleteTelegram(wallet_address: string, telegram: string) {
       } else {
         console.log(
           '➡️ ' +
-          telegram +
-          ' telegram handle removed successfully from user id : ' +
-          wallet_address
+            telegram +
+            ' telegram handle removed successfully from user id : ' +
+            wallet_address
         );
       }
     }
@@ -208,9 +208,9 @@ export function deleteEmail(wallet_address: string, email: string) {
       } else {
         console.log(
           '➡️ ' +
-          email +
-          ' email handle removed successfully from user id : ' +
-          wallet_address
+            email +
+            ' email handle removed successfully from user id : ' +
+            wallet_address
         );
       }
     }
@@ -232,9 +232,9 @@ export function deleteIfttt(wallet_address: string, ifttt: string) {
       } else {
         console.log(
           '➡️ ' +
-          ifttt +
-          ' ifttt handle removed successfully from user id : ' +
-          wallet_address
+            ifttt +
+            ' ifttt handle removed successfully from user id : ' +
+            wallet_address
         );
       }
     }

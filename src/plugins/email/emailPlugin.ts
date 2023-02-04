@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'https://www.googleapis.com/gmail/v1/users/userId/messages/send';
+const API_URL =
+  'https://www.googleapis.com/gmail/v1/users/userId/messages/send';
 
 export async function createMessage(to: string, subject: string, body: string) {
   const str = [`To: ${to}`, `Subject: ${subject}`, '', body].join('\n');
